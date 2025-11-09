@@ -42,3 +42,5 @@ interface printTeacherFunction {
 const printTeacher = ({firstName, lastName}: printTeacherFunction): string => {
   return `${firstName[0]}. ${lastName}`;
 };
+
+console.log(printTeacher({firstName: "John", lastName: "Doe"}));
