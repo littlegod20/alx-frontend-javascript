@@ -44,3 +44,23 @@ function printTeacher({ firstName, lastName }: printTeacherFunction): string {
 }
 
 console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
+
+
+interface StudentClass {
+  firstName: string;
+  lastName: string;
+  workOnHomework(): "Currently working";
+  displayName(): `${string}`;
+}
+
+class StudentClass implements StudentClass {
+  constructor(public firstName: string, public lastName: string) {}
+
+  workOnHomework(): "Currently working" {
+    return "Currently working";
+  }
+
+  displayName(): `${string}` {
+    return `${this.firstName}`;
+  }
+}
