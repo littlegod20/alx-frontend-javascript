@@ -49,12 +49,15 @@ console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
 interface StudentClassProps {
   firstName: string;
   lastName: string;
-  workOnHomework(): string;
-  displayName(): string;
 }
 
-class StudentClass implements StudentClassProps {
-  constructor(public firstName: string, public lastName: string) {}
+class StudentClass{
+  firstName: string;
+  lastName: string;
+  constructor({ firstName, lastName }: StudentClassProps) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
   workOnHomework(): string {
     return "Currently working";
