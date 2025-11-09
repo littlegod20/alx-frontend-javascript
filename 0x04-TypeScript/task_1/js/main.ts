@@ -49,18 +49,18 @@ console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
 interface StudentClass {
   firstName: string;
   lastName: string;
-  workOnHomework(): "Currently working";
-  displayName(): `${string}`;
+  workOnHomework(): string;
+  displayName(): string;
 }
 
 class StudentClass implements StudentClass {
   constructor(public firstName: string, public lastName: string) {}
 
-  workOnHomework(): "Currently working" {
+  workOnHomework(): string {
     return "Currently working";
   }
 
-  displayName(): `${string}` {
-    return `${this.firstName}`;
+  displayName() {
+    return this.firstName;
   }
 }
