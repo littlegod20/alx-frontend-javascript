@@ -46,14 +46,14 @@ function printTeacher({ firstName, lastName }: printTeacherFunction): string {
 console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
 
 
-interface StudentClass {
+interface StudentClassProps {
   firstName: string;
   lastName: string;
   workOnHomework(): string;
   displayName(): string;
 }
 
-class StudentClass implements StudentClass {
+class StudentClass implements StudentClassProps {
   constructor(public firstName: string, public lastName: string) {}
 
   workOnHomework(): string {
@@ -61,6 +61,6 @@ class StudentClass implements StudentClass {
   }
 
   displayName() {
-    return this.firstName;
+    return `${this.firstName} ${this.lastName}`;
   }
 }
