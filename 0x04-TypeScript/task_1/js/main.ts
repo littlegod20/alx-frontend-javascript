@@ -39,8 +39,8 @@ interface printTeacherFunction {
   lastName: string;
 }
 
-function printTeacher({firstName, lastName}: printTeacherFunction): string {
-  return `${firstName}. ${lastName}`;
-};
+function printTeacher({ firstName, lastName }: printTeacherFunction): string {
+  return `${firstName.charAt(0)}. ${lastName}`;
+}
 
-console.log(printTeacher({firstName: "John", lastName: "Doe"}));
+console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
