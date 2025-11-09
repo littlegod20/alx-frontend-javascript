@@ -33,3 +33,12 @@ const director1: Director = {
   contract: false,
   subject: "Math",
 };
+
+interface printTeacherFunction {
+  firstName: string;
+  lastName: string;
+}
+
+const printTeacher = ({firstName, lastName}: printTeacherFunction): string => {
+  return `${firstName[0]}. ${lastName}`;
+};
