@@ -8,6 +8,10 @@ interface Teacher {
   [key: string]: any;
 }
 
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
 const teacher1: Teacher = {
   firstName: "John",
   lastName: "Smith",
@@ -19,3 +23,13 @@ const teacher1: Teacher = {
 };
 
 console.log(teacher1);
+
+const director1: Directors = {
+  firstName: "John",
+  lastName: "Doe",
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+  location: "London",
+  contract: false,
+  subject: "Math",
+};
