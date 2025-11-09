@@ -35,12 +35,11 @@ const director1: Director = {
 };
 
 interface printTeacherFunction {
-  firstName: string;
-  lastName: string;
+  (firstName: string, lastName: string): string;
 }
 
-function printTeacher({firstName, lastName}: printTeacherFunction): string {
-  return `${firstName[0]}. ${lastName}`;
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
 };
 
-console.log(printTeacher({firstName: "John", lastName: "Doe"}));
+console.log(printTeacher("John", "Doe"));
